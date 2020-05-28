@@ -32,9 +32,9 @@ class Configuration implements ConfigurationInterface
 
     public function getConfigTreeBuilder()
     {
-        $builder = new TreeBuilder();
+        $builder = new TreeBuilder($this->alias, 'array');
 
-        $builder->root($this->alias, 'array')
+        $builder->getRootNode()
             ->children()
                 ->arrayNode('encryption')
                     ->canBeEnabled()
