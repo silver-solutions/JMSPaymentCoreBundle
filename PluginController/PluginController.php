@@ -1088,7 +1088,7 @@ abstract class PluginController implements PluginControllerInterface
         }
 
         $event = new PaymentInstructionStateChangeEvent($instruction, $oldState);
-        $this->dispatcher->dispatch(Events::PAYMENT_INSTRUCTION_STATE_CHANGE, $event);
+        $this->dispatcher->dispatch($event, Events::PAYMENT_INSTRUCTION_STATE_CHANGE);
     }
 
     private function dispatchPaymentStateChange(PaymentInterface $payment, $oldState)
@@ -1098,6 +1098,6 @@ abstract class PluginController implements PluginControllerInterface
         }
 
         $event = new PaymentStateChangeEvent($payment, $oldState);
-        $this->dispatcher->dispatch(Events::PAYMENT_STATE_CHANGE, $event);
+        $this->dispatcher->dispatch($event, Events::PAYMENT_STATE_CHANGE);
     }
 }
