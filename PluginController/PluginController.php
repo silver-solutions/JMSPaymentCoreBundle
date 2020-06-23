@@ -23,7 +23,7 @@ use JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentException;
 use JMS\Payment\CoreBundle\PluginController\Exception\InvalidPaymentInstructionException;
 use JMS\Payment\CoreBundle\PluginController\Exception\PluginNotFoundException;
 use JMS\Payment\CoreBundle\Util\Number;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>

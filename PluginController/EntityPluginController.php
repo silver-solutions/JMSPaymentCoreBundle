@@ -13,7 +13,7 @@ use JMS\Payment\CoreBundle\Plugin\QueryablePluginInterface;
 use JMS\Payment\CoreBundle\PluginController\Exception\Exception;
 use JMS\Payment\CoreBundle\PluginController\Exception\PaymentInstructionNotFoundException;
 use JMS\Payment\CoreBundle\PluginController\Exception\PaymentNotFoundException;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 /*
  * Copyright 2010 Johannes M. Schmitt <schmittjoh@gmail.com>

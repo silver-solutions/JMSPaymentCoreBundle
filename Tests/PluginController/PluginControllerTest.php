@@ -976,7 +976,7 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
         $args = array($options);
 
         if ($withDispatcher) {
-            $args[] = $this->dispatcher = $this->getMockBuilder('Symfony\Component\EventDispatcher\EventDispatcherInterface')->getMock();
+            $args[] = $this->dispatcher = $this->getMockBuilder('Symfony\Contracts\EventDispatcher\EventDispatcherInterface')->getMock();
         }
 
         $mock = $this->getMockForAbstractClass(

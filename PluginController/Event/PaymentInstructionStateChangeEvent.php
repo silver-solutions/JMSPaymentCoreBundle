@@ -3,7 +3,7 @@
 namespace JMS\Payment\CoreBundle\PluginController\Event;
 
 use JMS\Payment\CoreBundle\Model\PaymentInstructionInterface;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class PaymentInstructionStateChangeEvent extends Event
 {
