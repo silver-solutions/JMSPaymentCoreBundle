@@ -10,7 +10,7 @@ use Symfony\Component\Console\Tester\CommandTester;
 
 class GenerateKeyCommandTest extends BaseTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         self::createKernel();
 

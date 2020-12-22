@@ -4,7 +4,7 @@ namespace JMS\Payment\CoreBundle\Tests\Entity;
 
 use JMS\Payment\CoreBundle\Entity\ExtendedData;
 
-class ExtendedDataTest extends \PHPUnit_Framework_TestCase
+class ExtendedDataTest extends \PHPUnit\Framework\TestCase
 {
     public function testRemoveIgnoresIfKeyDoesNotExist()
     {

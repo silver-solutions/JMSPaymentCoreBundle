@@ -8,7 +8,7 @@ use JMS\Payment\CoreBundle\Entity\FinancialTransaction;
 use JMS\Payment\CoreBundle\Entity\Payment;
 use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
 
-class PaymentInstructionTest extends \PHPUnit_Framework_TestCase
+class PaymentInstructionTest extends \PHPUnit\Framework\TestCase
 {
     public function testConstructor()
     {

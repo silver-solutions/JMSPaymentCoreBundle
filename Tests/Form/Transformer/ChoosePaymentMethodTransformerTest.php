@@ -6,7 +6,7 @@ use JMS\Payment\CoreBundle\Entity\ExtendedData;
 use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
 use JMS\Payment\CoreBundle\Form\Transformer\ChoosePaymentMethodTransformer;
 
-class ChoosePaymentMethodTransformerTest extends \PHPUnit_Framework_TestCase
+class ChoosePaymentMethodTransformerTest extends \PHPUnit\Framework\TestCase
 {
     public function testTransformNullData()
     {

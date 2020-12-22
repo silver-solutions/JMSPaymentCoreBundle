@@ -10,7 +10,7 @@ use JMS\Payment\CoreBundle\Entity\PaymentInstruction;
 use JMS\Payment\CoreBundle\Model\CreditInterface;
 use JMS\Payment\CoreBundle\Model\FinancialTransactionInterface;
 
-class CreditTest extends \PHPUnit_Framework_TestCase
+class CreditTest extends \PHPUnit\Framework\TestCase
 {
     public function testConstructor()
     {

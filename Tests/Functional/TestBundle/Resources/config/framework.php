@@ -5,14 +5,11 @@ use Symfony\Component\HttpKernel\Kernel;
 $config = [
     'form' => true,
     'router' => [
-        'resource' => '%kernel.root_dir%/TestBundle/Resources/config/routing.yml',
+        'resource' => '%kernel.project_dir%/Tests/Functional/TestBundle/Resources/config/routing.yml',
     ],
     'secret' => 'test',
     'session' => [
         'storage_id' => 'session.storage.mock_file',
-    ],
-    'templating' => [
-        'engines' => ['twig', 'php'],
     ],
     'test' => true,
     'validation' => [
@@ -28,7 +25,7 @@ if (version_compare(Kernel::VERSION, '2.7', '>=')) {
 
 if (version_compare(Kernel::VERSION, '4.0', '<')) {
     $config['router'] = [
-        'resource' => '%kernel.root_dir%/TestBundle/Resources/config/routing_legacy.yml',
+        'resource' => '%kernel.project_dir%/Tests/Functional/TestBundle/Resources/config/routing_legacy.yml',
     ];
 }
 

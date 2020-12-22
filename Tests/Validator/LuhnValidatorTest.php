@@ -6,12 +6,12 @@ use JMS\Payment\CoreBundle\Util\Legacy;
 use JMS\Payment\CoreBundle\Validator\Luhn;
 use JMS\Payment\CoreBundle\Validator\LuhnValidator;
 
-class LuhnValidatorTest extends \PHPUnit_Framework_TestCase
+class LuhnValidatorTest extends \PHPUnit\Framework\TestCase
 {
     protected $context;
     protected $validator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->context = Legacy::isOldPathExecutionContext()
             ? $this->getMockBuilder('Symfony\Component\Validator\ExecutionContext')

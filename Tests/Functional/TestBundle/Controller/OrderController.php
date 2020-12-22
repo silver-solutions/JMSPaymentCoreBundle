@@ -20,7 +20,7 @@ class OrderController extends AbstractController
 {
     /**
      * @Route("/{orderId}/payment-details", name = "payment_details")
-     * @Template("TestBundle:Order:paymentDetails.html.twig")
+     * @Template("@Test/Order/paymentDetails.html.twig")
      *
      * @param int $orderId
      * @param PluginController $pluginController

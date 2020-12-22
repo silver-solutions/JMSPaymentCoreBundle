@@ -4,11 +4,11 @@ namespace JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Controller;
 
 use JMS\Payment\CoreBundle\Tests\Functional\TestBundle\Entity\Order;
 use JMS\Payment\CoreBundle\Util\Legacy;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\Response;
 
-class LegacyOrderController extends Controller
+class LegacyOrderController extends AbstractController
 {
     public function paymentDetailsAction($orderId)
     {
@@ -53,7 +53,7 @@ class LegacyOrderController extends Controller
             return new Response('', 201);
         }
 
-        return $this->render('TestBundle:Order:paymentDetails.html.twig', [
+        return $this->render('@Test/Order/paymentDetails.html.twig', [
             'form' => $form->createView()
         ]);
     }

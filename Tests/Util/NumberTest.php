@@ -4,7 +4,7 @@ namespace JMS\Payment\CoreBundle\Tests\Util;
 
 use JMS\Payment\CoreBundle\Util\Number;
 
-class NumberTest extends \PHPUnit_Framework_TestCase
+class NumberTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider getComparisonTests

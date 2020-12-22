@@ -7,9 +7,9 @@ use JMS\Payment\CoreBundle\Cryptography\DefusePhpEncryptionService;
 use JMS\Payment\CoreBundle\Entity\ExtendedData;
 use JMS\Payment\CoreBundle\Entity\ExtendedDataType;
 
-class ExtendedDataTypeTest extends \PHPUnit_Framework_TestCase
+class ExtendedDataTypeTest extends \PHPUnit\Framework\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         if (Type::hasType(ExtendedDataType::NAME)) {
             Type::overrideType(ExtendedDataType::NAME, 'JMS\Payment\CoreBundle\Entity\ExtendedDataType');

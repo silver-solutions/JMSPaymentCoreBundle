@@ -4,7 +4,7 @@ namespace JMS\Payment\CoreBundle\Tests\Entity;
 
 use JMS\Payment\CoreBundle\Entity\FinancialTransaction;
 
-class FinancialTransactionTest extends \PHPUnit_Framework_TestCase
+class FinancialTransactionTest extends \PHPUnit\Framework\TestCase
 {
     public function testConstructor()
     {

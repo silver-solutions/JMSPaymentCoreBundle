@@ -19,7 +19,7 @@ use JMS\Payment\CoreBundle\PluginController\Event\PaymentStateChangeEvent;
 use JMS\Payment\CoreBundle\PluginController\PluginController;
 use JMS\Payment\CoreBundle\PluginController\Result;
 
-class PluginControllerTest extends \PHPUnit_Framework_TestCase
+class PluginControllerTest extends \PHPUnit\Framework\TestCase
 {
     private $dispatcher;
 
@@ -897,17 +897,20 @@ class PluginControllerTest extends \PHPUnit_Framework_TestCase
         $this->dispatcher
             ->expects($this->at(0))
             ->method('dispatch')
-            ->with('payment.state_change', new PaymentStateChangeEvent($payment, PaymentInterface::STATE_NEW))
+            ->with(new PaymentStateChangeEvent($payment, PaymentInterface::STATE_NEW), 'payment.state_change')
         ;
         $this->dispatcher
             ->expects($this->at(1))
             ->method('dispatch')
-            ->with('payment.state_change', new PaymentStateChangeEvent($payment, PaymentInterface::STATE_APPROVING))
+            ->with(new PaymentStateChangeEvent($payment, PaymentInterface::STATE_APPROVING), 'payment.state_change')
         ;
         $this->dispatcher
             ->expects($this->at(2))
             ->method('dispatch')
-            ->with('payment_instruction.state_change', new PaymentInstructionStateChangeEvent($instruction, PaymentInstructionInterface::STATE_VALID))
+            ->with(
+                new PaymentInstructionStateChangeEvent($instruction, PaymentInstructionInterface::STATE_VALID),
+                'payment_instruction.state_change'
+            )
         ;
 
         $this->callApprove($controller, array($payment, 100));

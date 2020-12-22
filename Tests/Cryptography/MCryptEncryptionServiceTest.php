@@ -4,9 +4,9 @@ namespace JMS\Payment\CoreBundle\Tests\Cryptography;
 
 use JMS\Payment\CoreBundle\Cryptography\MCryptEncryptionService;
 
-class MCryptEncryptionServiceTest extends \PHPUnit_Framework_TestCase
+class MCryptEncryptionServiceTest extends \PHPUnit\Framework\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         if (version_compare(phpversion(), '7.1', '>=')) {
             $this->markTestSkipped('mcrypt is deprecated since PHP 7.1');

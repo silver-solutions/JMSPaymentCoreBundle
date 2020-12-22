@@ -4,7 +4,7 @@ namespace JMS\Payment\CoreBundle\Tests\Plugin;
 
 use JMS\Payment\CoreBundle\Plugin\ErrorBuilder;
 
-class ErrorBuilderTest extends \PHPUnit_Framework_TestCase
+class ErrorBuilderTest extends \PHPUnit\Framework\TestCase
 {
     private $builder;
 
@@ -27,7 +27,7 @@ class ErrorBuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(array('baz'), $ex->getGlobalErrors());
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->builder = new ErrorBuilder();
     }
