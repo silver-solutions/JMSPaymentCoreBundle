@@ -20,5 +20,7 @@ class GenerateKeyCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln(Key::createNewRandomKey()->saveToAsciiSafeString());
+
+        return self::SUCCESS;
     }
 }
