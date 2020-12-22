@@ -21,6 +21,6 @@ class GenerateKeyCommand extends Command
     {
         $output->writeln(Key::createNewRandomKey()->saveToAsciiSafeString());
 
-        return self::SUCCESS;
+        return Command::SUCCESS;
     }
 }
