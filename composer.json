@@ -2,7 +2,9 @@
     "name": "ezsystems/payment-core-bundle",
     "type": "symfony-bundle",
     "description": "A unified API for processing payments with Symfony",
-    "keywords": ["payment"],
+    "keywords": [
+        "payment"
+    ],
     "homepage": "http://jmspaymentcorebundle.readthedocs.io",
     "license": "Apache-2.0",
     "replace": {
@@ -54,10 +56,11 @@
         "symfony/twig-bridge": "^5.1",
         "twig/twig": "~1.0|~2.0",
         "matthiasnoback/symfony-config-test": "^4.2"
-
     },
     "autoload": {
-        "psr-0": { "JMS\\Payment\\CoreBundle": "" }
+        "psr-0": {
+            "JMS\\Payment\\CoreBundle": ""
+        }
     },
     "target-dir": "JMS/Payment/CoreBundle",
     "extra": {
