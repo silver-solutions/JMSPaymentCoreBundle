@@ -1,7 +1,7 @@
 # JMSPaymentCoreBundle
 A unified API for processing payments with Symfony
 
-Test Jira Integration
+- Test Jira Integration
 
 [![Build Status](https://img.shields.io/travis/schmittjoh/JMSPaymentCoreBundle/master.svg?style=flat-square)](http://travis-ci.org/schmittjoh/JMSPaymentCoreBundle)
 [![Total Downloads](https://img.shields.io/packagist/dt/jms/payment-core-bundle.svg?style=flat-square)](https://packagist.org/packages/jms/payment-core-bundle)
